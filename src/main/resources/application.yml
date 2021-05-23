@@ -1,0 +1,13 @@
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: DEBUG
+spring:
+  r2dbc:
+    url: "r2dbc:h2:file:///./data-compare"
+    username: data-compare
+    password: data-compare
+  h2:
+    console:
+      enabled: true
