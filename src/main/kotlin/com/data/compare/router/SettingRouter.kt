@@ -11,7 +11,10 @@ class SettingRouter {
     @Bean
     fun router(settingHandler: SettingHandler) = coRouter {
         accept(APPLICATION_JSON).nest {
-            GET("/api/settings", settingHandler::findAll)
+            path("/api/settings").nest {
+                GET("", settingHandler::findAll)
+                POST("", settingHandler::save)
+            }
         }
     }
 }
