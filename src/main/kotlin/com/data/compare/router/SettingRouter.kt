@@ -13,7 +13,9 @@ class SettingRouter {
         accept(APPLICATION_JSON).nest {
             path("/api/settings").nest {
                 GET("", settingHandler::findAll)
+                GET("{id}", settingHandler::find)
                 POST("", settingHandler::save)
+                PUT("{id}", settingHandler::save)
             }
         }
     }

@@ -6,6 +6,6 @@ create table if not exists database_setting (
    host varchar(1000),
    username varchar(1000),
    password varchar(1000),
-   created_at date,
-   updated_at date
+   created_at datetime,
+   updated_at datetime
 );
